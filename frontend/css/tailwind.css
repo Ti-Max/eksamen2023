@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+@layer base {
+  .input-auth {
+    @apply mb-2 w-full rounded-md border-[1px] border-secondaryAlt bg-tertiary p-3 text-text focus:border-[1px] focus-visible:border-primary focus-visible:outline-none !important;
+  }
+
+  .button-auth {
+    @apply w-full rounded-md bg-secondary p-2 text-2xl font-extrabold hover:bg-secondaryAlt focus-visible:bg-secondaryAlt focus-visible:outline-none;
+  }
+
+  .selected-solve {
+    @apply border-2 border-secondary bg-secondaryAlt;
+  }
+
+  .hidden-element {
+    @apply max-h-0 opacity-0 !important;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-tertiary;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondaryAlt;
+  }
+}

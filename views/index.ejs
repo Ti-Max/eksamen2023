@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title>Epic timer</title>
+    <script>
+      var userdata = JSON.parse(`<%- JSON.stringify(userdata) %>`);
+    </script>
+  </head>
+  <body class="h-screen bg-backgroud font-roboto text-text">
+    <div
+      class="m-auto grid min-h-screen max-w-6xl grid-rows-1 p-4 transition-all"
+    >
+      <div class="hide-during-solve flex justify-between">
+        <div class="text-3xl text-primary">Epic Timer</div>
+        <div class="text-center text-primary">
+          <%= userdata.username %>
+          <br />
+          <a
+            href="./logout"
+            class="text-secondary transition-all hover:text-text"
+          >
+            logout
+          </a>
+        </div>
+      </div>
+
+      <div id="timer-root"></div>
+
+      <div class="hide-during-solve flex justify-between">
+        <div class="text-secondary">
+          Made by
+          <a
+            href="https://github.com/Ti-Max"
+            class="text-primary transition-all hover:text-text"
+          >
+            Ti-Max
+          </a>
+        </div>
+        <div class="text-secondary">
+          <a
+            href="https://github.com/Ti-Max/eksamen2023"
+            class="text-primary transition-all hover:text-text"
+          >
+            v1.0
+          </a>
+        </div>
+      </div>
+
+      <div class="hidden-element selected-solve hidden">dummy</div>
+    </div>
+  </body>
+  <script src="javascripts/bundle.main.js"></script>
+</html>
+
+<script></script>
+<!-- <script src="javascripts/timer.js"></script> -->
