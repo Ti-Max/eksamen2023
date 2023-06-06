@@ -8,8 +8,7 @@ const auth = require("./routes/access/auth");
 const loginPOST = require("./routes/access/loginPOST");
 const signupPOST = require("./routes/access/signupPOST");
 const logoutPOST = require("./routes/access/logoutGET");
-const commitSolvePOST = require("./routes/commitSolvePOST");
-const deleteSolvesPOST = require("./routes/deleteSolvesPOST");
+const getAllUsersPOST = require("./routes/getAllUsers");
 
 const accessRouter = require("./routes/access/access");
 const indexRouter = require("./routes/index");
@@ -46,14 +45,15 @@ app.use(express.static(path.join(__dirname, "public")));
 // Pages without Authorization
 app.use(accessRouter);
 app.use(loginPOST);
-app.use(signupPOST);
 
 // Need token
 app.use(auth);
+app.use(signupPOST);
 app.use(indexRouter);
 app.use(logoutPOST);
-app.use(commitSolvePOST);
-app.use(deleteSolvesPOST);
+app.use(getAllUsersPOST);
+// app.use(commitSolvePOST);
+// app.use(deleteSolvesPOST);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);

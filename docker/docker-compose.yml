@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   db:
+    # build: .
     container_name: eksamen2023-db
     image: mysql:latest
     cap_add:

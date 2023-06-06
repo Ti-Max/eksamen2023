@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
   jwt.verify(token, process.env.TOKEN_KEY, (err, userinfo) => {
     if (err) return res.redirect("./access");
 
-    req.username = userinfo.username;
+    req.email = userinfo.email;
     req.user_id = userinfo.user_id;
 
     return next();

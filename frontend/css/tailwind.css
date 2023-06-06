@@ -4,39 +4,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 
 @layer base {
+  .btn{
+    @apply w-full rounded-sm m-1 border-slate-300 bg-gray-400 p-3 text-slate-600 focus-visible:outline-none hover:text-slate-200 hover:bg-slate-500 !important;
+  }
+  .sml-btn{
+    @apply bg-slate-200 text-slate-700 px-2 rounded-md hover:bg-slate-300;
+  }
+
+  .active-btn{
+    @apply w-full rounded-sm m-1 border-slate-300 p-3  focus-visible:outline-none text-slate-200 bg-slate-500 !important;
+  }
+
   .input-auth {
-    @apply mb-2 w-full rounded-md border-[1px] border-secondaryAlt bg-tertiary p-3 text-text focus:border-[1px] focus-visible:border-primary focus-visible:outline-none !important;
+    @apply mb-2 w-full rounded-md border-2 border-slate-300 bg-slate-300 p-3 text-slate-800 focus:border-2 focus-visible:border-blue-200 focus-visible:outline-none !important;
   }
 
   .button-auth {
-    @apply w-full rounded-md bg-secondary p-2 text-2xl font-extrabold hover:bg-secondaryAlt focus-visible:bg-secondaryAlt focus-visible:outline-none;
+    @apply text-sky-50 w-full rounded-md bg-slate-500 p-2 text-2xl font-extrabold hover:bg-slate-600 focus-visible:bg-black focus-visible:outline-none;
   }
 
-  .selected-solve {
-    @apply border-2 border-secondary bg-secondaryAlt;
+  .input-form {
+    @apply mb-2 w-full rounded-md border-2 border-slate-300 bg-slate-300 p-3 text-slate-800 focus:border-2 focus-visible:border-blue-200 focus-visible:outline-none !important;
   }
 
-  .hidden-element {
-    @apply max-h-0 opacity-0 !important;
-    overflow: hidden;
+  .button-form {
+    @apply text-slate-300 w-full rounded-md bg-slate-800 p-2 text-2xl font-extrabold hover:bg-slate-600 focus-visible:bg-black  focus-visible:outline-none focus-visible:border-0;
   }
 
-  ::-webkit-scrollbar {
-    width: 8px;
+  .input-form {
+    @apply text-slate-800 rounded-md bg-slate-200 p-2 text-2xl font-extrabold focus-visible:border-slate-500 focus-visible:outline-none !important;
   }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    @apply bg-tertiary;
+  
+  .error-message{
+    @apply text-center p-2 border-red-500 border-[1px] bg-red-100;
   }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    @apply bg-secondary;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-secondaryAlt;
+  .success-message{
+  @apply text-center p-2 border-green-500 border-[1px] bg-green-100;
   }
 }
