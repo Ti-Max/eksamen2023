@@ -3,6 +3,7 @@ import React from "react";
 class AuthForm extends React.Component {
   constructor(props) {
     super(props);
+    document.querySelector(".error-message").style.opacity = "0%";
   }
 
   login(e) {
@@ -24,6 +25,7 @@ class AuthForm extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
+          document.querySelector(".error-message").style.opacity = "100%";
           document.querySelector(".error-message").innerHTML = data.error;
         } else {
           // store token
@@ -41,8 +43,8 @@ class AuthForm extends React.Component {
 
   render() {
     return (
-      <div className="bg-slate-700 rounded-xl p-4"> 
-        <div id="login-form"> 
+      <div className="rounded-xl bg-slate-700 p-4">
+        <div id="login-form">
           <form onSubmit={this.login}>
             <input
               className="input-auth"

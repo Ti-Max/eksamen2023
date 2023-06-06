@@ -27,9 +27,11 @@ router.post("/login", unauth, async function (req, res) {
         res.status(401).json({ error: "Wrong password" });
       } else {
         // Create token
+        console.log(rows[0]);
         const token = jwt.sign(
           {
             email: req.body.email,
+            category: rows[0].category,
             user_id: rows[0].id,
           },
           process.env.TOKEN_KEY,

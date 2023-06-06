@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import AuthForm from "./Auth";
-import { AdminPage } from "./admin";
-import { UserPage } from "./user";
+import { AdminPage } from "./Admin";
+import { UserPage } from "./User";
 
 // access page
 const domRoot = document.getElementById("auth-form-root");

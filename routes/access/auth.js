@@ -11,6 +11,7 @@ const verifyToken = (req, res, next) => {
     if (err) return res.redirect("./access");
 
     req.email = userinfo.email;
+    req.category = userinfo.category;
     req.user_id = userinfo.user_id;
 
     return next();

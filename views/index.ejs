@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="stylesheets/style.css" />
-  <title>Eksamen 2023</title>
+  <title>Timo Bedrift</title>
+  <script>
+    var userdata = JSON.parse(`<%- JSON.stringify(userdata) %>`);
+  </script>
 </head>
 
 <body class="h-screen font-roboto text-black bg-slate-200">
@@ -15,7 +18,7 @@
     <div class="mt-40 mb-5">
       <div class="text-center text-6xl text-slate-800 font-bold m-2">
 
-        Eksamen
+        Timo Bedrift
       </div>
 
       <div class="text-gray-500 text-center">
@@ -28,7 +31,7 @@
       </div>
     </div>
 
-    <% if(userdata.email==="admin@admin.eksamen" ){ %>
+    <% if(userdata.category.toLowerCase()==="administrasjon" ){ %>
       <div id="admin-root"></div>
       <% } else { %>
         <div id="user-root"></div>
@@ -37,7 +40,7 @@
 
           <div class="mt-8 flex bg-slate-500 text-sky-50 text-center p-2">
             <div class="w-1/2 border-r-2 border-slate-400 py-20">
-              Eksamen 2023 ©
+              Timo Bedrift ©
             </div>
             <div class="w-1/2 py-20">
               Support: <a class="text-blue-100 hover:text-blue-300"

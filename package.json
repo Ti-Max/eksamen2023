@@ -1,5 +1,5 @@
 {
-  "name": "eksamen2023",
+  "name": "TimoBedrift",
   "version": "1.0.0",
   "description": "A timer for speedcubing with auto sync with the cloud.",
   "main": "/src/app.js",

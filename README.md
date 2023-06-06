@@ -1,4 +1,4 @@
-# eksamen2023
+# TimoBedrift
 
 # Installation
 
